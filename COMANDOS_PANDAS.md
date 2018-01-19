@@ -1,5 +1,4 @@
-# python_pandas
-Comandos em python com pandas
+# Comandos básicos utilizando o pandas
 
 
 > importa pandas que a ser usado com pd
@@ -58,30 +57,34 @@ Comandos em python com pandas
 > apaga linhas duplicadas
 * df.drop_duplicates(inplace=True)
 
-###########################
-#GRAFICOS
+> remove linhas com valores nulos
+* df_08 = df_08.dropna(axis=0, how='any')
 
-#deixar ver os graficos em blocos
-%matplotlib inline
+# Geração de gráficos
 
-# hist = colunas
-# bar = barras
-# pie = pizza
-# box  = caixa
-#scatter = dispersai
-#funcao geral de graficos e kind eh o tipo de grafico
-df.plot(kind="hist")
+> deixar ver os graficos em blocos
+* %matplotlib inline
 
-#funcao cria grafico de coluna pra cada coluna
-df.hist()
-#definindo altura e largura dos graficos
-df.hist(figsize=(10,10))
+> tipos de gráficos
+* hist = colunas
+* bar = barras
+* pie = pizza
+* box  = caixa
+* scatter = dispersai
 
-#faz grafico apenas da coluna
-df["coluna"].hist()
+> funcao geral de graficos e kind eh o tipo de grafico
+* df.plot(kind="hist")
 
-#grafico de dispersao
-df.plot(x="colunax",y="colunay",kind="scatter")
+> funcao cria grafico de coluna pra cada coluna
+* df.hist()
 
-#remove linhas com valores nulos
-df_08 = df_08.dropna(axis=0, how='any')
+> definindo altura e largura dos graficos
+* df.hist(figsize=(10,10))
+
+> faz grafico apenas da coluna
+* df["coluna"].hist()
+
+> grafico de dispersao
+* df.plot(x="colunax",y="colunay",kind="scatter")
+
+
