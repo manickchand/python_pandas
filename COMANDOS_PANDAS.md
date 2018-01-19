@@ -2,57 +2,57 @@
 Comandos em python com pandas
 
 
-#importa pandas que a ser usado com pd
+* importa pandas que a ser usado com pd
 import pandas as pd
 
-#ler csv
+* ler csv
 df = pd.read_csv("nome.csv")
 
-#mostra estrutura dos dados, defoult eh 5
+* mostra estrutura dos dados, defoult eh 5
 df.head()
 
-#salvar csv
+* salvar csv
 novo_df.to_csv("nome.csv")
 
-# isto retorna os tipos de dados das colunas
+* isto retorna os tipos de dados das colunas
 df.dtypes
 
-#tupla com as dimensoes do dataFrame
+* tupla com as dimensoes do dataFrame
 df.shape
 
-#lista os dados, incluindo valores  nulos
+* lista os dados, incluindo valores  nulos
 df.info
 
-#tira uma media da coluna
+* tira uma media da coluna
 media = df["coluna"].mean()
 
-#tipo da coluna diagnosis linha 0
+* tipo da coluna diagnosis linha 0
 type(df['diagnosis'][0])
 
-# isto retorna o número de valores únicos em cada coluna
+* isto retorna o número de valores únicos em cada coluna
 df.nunique()
 
-# isto retorna estatísticas descritivas úteis para cada coluna de dados
+* isto retorna estatísticas descritivas úteis para cada coluna de dados
 df.describe()
 
-# isso também se aplicar ao comando `.tail()` que retorna as últimas linhas do dataframe
+* isso também se aplicar ao comando `.tail()` que retorna as últimas linhas do dataframe
 df.tail(2)
 
-# Exibir o índice e rótulo de cada coluna
+* Exibir o índice e rótulo de cada coluna
 for i, v in enumerate(df.columns):
     print(i, v)
 
-# selecionar todas as colunas desde 'id' até a última coluna relacionada à média
+* selecionar todas as colunas desde 'id' até a última coluna relacionada à média
 df_means = df.loc[:,'id':'fractal_dimension_mean']
 df_means = df.iloc[:,:11]
 
-#retorna quais valores sao nulos ou nao
+* retorna quais valores sao nulos ou nao
 df.isnull()
 
-#substitui valores nulos da coluna pelo valor passado(inplace true diz para ele atualizar a mesma coluna, senao ele creia uma nova coluna)
+* substitui valores nulos da coluna pelo valor passado(inplace true diz para ele atualizar a mesma coluna, senao ele creia uma nova coluna)
 df["coluna"].fillna(valor,inplace=True)
 
-#verifica se existem linhas duplicadas
+* verifica se existem linhas duplicadas
 df.duplicated()
 
 #apaga linhas duplicadas
