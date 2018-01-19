@@ -62,7 +62,7 @@
 
 # Geração de gráficos
 
-> deixar ver os graficos em blocos
+> graficos em blocos
 * %matplotlib inline
 
 > tipos de gráficos
