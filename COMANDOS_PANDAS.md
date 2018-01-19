@@ -82,3 +82,6 @@ df["coluna"].hist()
 
 #grafico de dispersao
 df.plot(x="colunax",y="colunay",kind="scatter")
+
+#remove linhas com valores nulos
+df_08 = df_08.dropna(axis=0, how='any')
