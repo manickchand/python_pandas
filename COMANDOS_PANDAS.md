@@ -63,8 +63,8 @@
 > extrair int de strings da coluna
 * df_08['cyl'] = df_08['cyl'].str.extract('(\d+)').astype(int)
 
-> converter a coluna para int
-* df_18['cyl'] = df_18['cyl'].str.extract('(\d+)').astype(int)
+> converter a coluna float para int
+* df_18['cyl'] = df_18['cyl'].astype(int)
 
 # Geração de gráficos
 
