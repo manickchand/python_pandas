@@ -60,6 +60,12 @@
 > remove linhas com valores nulos
 * df_08 = df_08.dropna(axis=0, how='any')
 
+> extrair int de strings da coluna
+* df_08['cyl'] = df_08['cyl'].str.extract('(\d+)').astype(int)
+
+> converter a coluna para int
+* df_18['cyl'] = df_18['cyl'].str.extract('(\d+)').astype(int)
+
 # Geração de gráficos
 
 > graficos em blocos
